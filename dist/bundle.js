@@ -1,88 +1,87 @@
-!(function(n) {
-  var e = {};
-  function t(r) {
-    if (e[r]) return e[r].exports;
-    var o = (e[r] = { i: r, l: !1, exports: {} });
-    return n[r].call(o.exports, o, o.exports, t), (o.l = !0), o.exports;
+!(function(t) {
+  var n = {};
+  function e(r) {
+    if (n[r]) return n[r].exports;
+    var o = (n[r] = { i: r, l: !1, exports: {} });
+    return t[r].call(o.exports, o, o.exports, e), (o.l = !0), o.exports;
   }
-  (t.m = n),
-    (t.c = e),
-    (t.d = function(n, e, r) {
-      t.o(n, e) || Object.defineProperty(n, e, { enumerable: !0, get: r });
+  (e.m = t),
+    (e.c = n),
+    (e.d = function(t, n, r) {
+      e.o(t, n) || Object.defineProperty(t, n, { enumerable: !0, get: r });
     }),
-    (t.r = function(n) {
+    (e.r = function(t) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
-        Object.defineProperty(n, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(n, "__esModule", { value: !0 });
+        Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
+        Object.defineProperty(t, "__esModule", { value: !0 });
     }),
-    (t.t = function(n, e) {
-      if ((1 & e && (n = t(n)), 8 & e)) return n;
-      if (4 & e && "object" == typeof n && n && n.__esModule) return n;
+    (e.t = function(t, n) {
+      if ((1 & n && (t = e(t)), 8 & n)) return t;
+      if (4 & n && "object" == typeof t && t && t.__esModule) return t;
       var r = Object.create(null);
       if (
-        (t.r(r),
-        Object.defineProperty(r, "default", { enumerable: !0, value: n }),
-        2 & e && "string" != typeof n)
+        (e.r(r),
+        Object.defineProperty(r, "default", { enumerable: !0, value: t }),
+        2 & n && "string" != typeof t)
       )
-        for (var o in n)
-          t.d(
+        for (var o in t)
+          e.d(
             r,
             o,
-            function(e) {
-              return n[e];
+            function(n) {
+              return t[n];
             }.bind(null, o)
           );
       return r;
     }),
-    (t.n = function(n) {
-      var e =
-        n && n.__esModule
+    (e.n = function(t) {
+      var n =
+        t && t.__esModule
           ? function() {
-              return n.default;
+              return t.default;
             }
           : function() {
-              return n;
+              return t;
             };
-      return t.d(e, "a", e), e;
+      return e.d(n, "a", n), n;
     }),
-    (t.o = function(n, e) {
-      return Object.prototype.hasOwnProperty.call(n, e);
+    (e.o = function(t, n) {
+      return Object.prototype.hasOwnProperty.call(t, n);
     }),
-    (t.p = ""),
-    t((t.s = 0));
+    (e.p = ""),
+    e((e.s = 0));
 })([
-  function(n, e, t) {
+  function(t, n, e) {
     "use strict";
-    t.r(e);
+    e.r(n);
     var r,
       o = (function() {
-        function n() {}
+        function t() {}
         return (
-          (n.add = function(n, e) {
-            return "Class " + (n + e);
+          (t.add = function(t, n) {
+            return "Class Add" + (t + n);
           }),
-          (n.subtract = function(n, e) {
-            return "Class " + (n - e);
+          (t.subtract = function(t, n) {
+            return "Class Subtract" + (t - n);
           }),
-          n
+          t
         );
       })();
-    !(function(n) {
-      (n.add = function(n, e) {
-        return "Namespace " + (n + e);
+    !(function(t) {
+      (t.add = function(t, n) {
+        return "Namespace Add" + (t + n);
       }),
-        (n.subtract = function(n, e) {
-          return "Namespace " + (n - e);
+        (t.subtract = function(t, n) {
+          return "Namespace Subtract" + (t - n);
         });
     })(r || (r = {})),
-      console.log("Class", o.add(1, 1)),
-      console.log("Const", "Const " + (2 + 2)),
-      console.log("Namespace", r.add(3, 3)),
+      console.log(o.add(1, 1)),
+      console.log("Const Add" + (2 + 2)),
+      console.log(r.add(3, 3)),
       console.log(
-        "Functions",
-        (function(n, e) {
-          return "Function " + (n + e);
+        (function(t, n) {
+          return "Function Add" + (t + n);
         })(4, 4)
       );
   }

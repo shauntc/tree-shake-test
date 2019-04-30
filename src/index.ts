@@ -3,7 +3,7 @@ import { ConstItem } from "./const";
 import { Namespace } from "./namespace";
 import { add } from "./functions";
 
-console.log("Class", ClassWithStatics.add(1, 1));
-console.log("Const", ConstItem.add(2, 2));
-console.log("Namespace", Namespace.add(3, 3))
-console.log("Functions", add(4, 4));
+console.log(ClassWithStatics.add(1, 1));
+console.log(ConstItem.add(2, 2));
+console.log(Namespace.add(3, 3))
+console.log(add(4, 4));
