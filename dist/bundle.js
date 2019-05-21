@@ -1,87 +1,95 @@
-!(function(t) {
-  var n = {};
-  function e(r) {
-    if (n[r]) return n[r].exports;
-    var o = (n[r] = { i: r, l: !1, exports: {} });
-    return t[r].call(o.exports, o, o.exports, e), (o.l = !0), o.exports;
+!(function(e) {
+  var t = {};
+  function n(r) {
+    if (t[r]) return t[r].exports;
+    var u = (t[r] = { i: r, l: !1, exports: {} });
+    return e[r].call(u.exports, u, u.exports, n), (u.l = !0), u.exports;
   }
-  (e.m = t),
-    (e.c = n),
-    (e.d = function(t, n, r) {
-      e.o(t, n) || Object.defineProperty(t, n, { enumerable: !0, get: r });
+  (n.m = e),
+    (n.c = t),
+    (n.d = function(e, t, r) {
+      n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
     }),
-    (e.r = function(t) {
+    (n.r = function(e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
-        Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(t, "__esModule", { value: !0 });
+        Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+        Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (e.t = function(t, n) {
-      if ((1 & n && (t = e(t)), 8 & n)) return t;
-      if (4 & n && "object" == typeof t && t && t.__esModule) return t;
+    (n.t = function(e, t) {
+      if ((1 & t && (e = n(e)), 8 & t)) return e;
+      if (4 & t && "object" == typeof e && e && e.__esModule) return e;
       var r = Object.create(null);
       if (
-        (e.r(r),
-        Object.defineProperty(r, "default", { enumerable: !0, value: t }),
-        2 & n && "string" != typeof t)
+        (n.r(r),
+        Object.defineProperty(r, "default", { enumerable: !0, value: e }),
+        2 & t && "string" != typeof e)
       )
-        for (var o in t)
-          e.d(
+        for (var u in e)
+          n.d(
             r,
-            o,
-            function(n) {
-              return t[n];
-            }.bind(null, o)
+            u,
+            function(t) {
+              return e[t];
+            }.bind(null, u)
           );
       return r;
     }),
-    (e.n = function(t) {
-      var n =
-        t && t.__esModule
+    (n.n = function(e) {
+      var t =
+        e && e.__esModule
           ? function() {
-              return t.default;
+              return e.default;
             }
           : function() {
-              return t;
+              return e;
             };
-      return e.d(n, "a", n), n;
+      return n.d(t, "a", t), t;
     }),
-    (e.o = function(t, n) {
-      return Object.prototype.hasOwnProperty.call(t, n);
+    (n.o = function(e, t) {
+      return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (e.p = ""),
-    e((e.s = 0));
+    (n.p = ""),
+    n((n.s = 0));
 })([
-  function(t, n, e) {
+  function(e, t, n) {
     "use strict";
-    e.r(n);
+    n.r(t);
     var r,
-      o = (function() {
-        function t() {}
+      u = (function() {
+        function e() {}
         return (
-          (t.add = function(t, n) {
-            return "Class Add" + (t + n);
+          (e.add = function(e, t) {
+            return "Class Add" + (e + t);
           }),
-          (t.subtract = function(t, n) {
-            return "Class Subtract" + (t - n);
+          (e.subtract = function(e, t) {
+            return "Class Subtract" + (e - t);
           }),
-          t
+          (e.multiply = function(e, t) {
+            return "Class Multiply " + e * t;
+          }),
+          (e.value = "Class Value"),
+          e
         );
       })();
-    !(function(t) {
-      (t.add = function(t, n) {
-        return "Namespace Add" + (t + n);
+    !(function(e) {
+      (e.add = function(e, t) {
+        return "Namespace Add" + (e + t);
       }),
-        (t.subtract = function(t, n) {
-          return "Namespace Subtract" + (t - n);
-        });
-    })(r || (r = {})),
-      console.log(o.add(1, 1)),
+        (e.subtract = function(e, t) {
+          return "Namespace Subtract" + (e - t);
+        }),
+        (e.multiply = function(e, t) {
+          return "Namespace Multiply " + e * t;
+        }),
+        (e.value = "Namespace Value");
+    })(r || (r = {}));
+    console.log(u.add(1, 1)),
       console.log("Const Add" + (2 + 2)),
       console.log(r.add(3, 3)),
       console.log(
-        (function(t, n) {
-          return "Function Add" + (t + n);
+        (function(e, t) {
+          return "NoWrap Add" + (e + t);
         })(4, 4)
       );
   }

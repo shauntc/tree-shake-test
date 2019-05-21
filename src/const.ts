@@ -4,5 +4,7 @@ export const ConstItem = {
   },
   subtract(a, b) {
     return `Const Subtract${a - b}`;
-  }
+  },
+  multiply: (a, b) => `Const Multiply ${a * b}`,
+  value: "Const Value"
 }

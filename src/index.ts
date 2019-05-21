@@ -1,7 +1,7 @@
 import { ClassWithStatics } from "./class";
 import { ConstItem } from "./const";
 import { Namespace } from "./namespace";
-import { add } from "./functions";
+import { add } from "./no-wrap";
 
 console.log(ClassWithStatics.add(1, 1));
 console.log(ConstItem.add(2, 2));
